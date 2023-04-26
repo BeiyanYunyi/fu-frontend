@@ -1,0 +1,4 @@
+{
+  "editor.formatOnSave": true,
+  "css.customData": ["./css-data.json"]
+}

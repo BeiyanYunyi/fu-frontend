@@ -1,0 +1,38 @@
+{
+  "name": "fu-frontend",
+  "version": "1.0.0",
+  "description": "Future unknown frontend",
+  "packageManager": "pnpm@8.3.1",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@types/babel__core": "^7.20.0",
+    "@types/node": "^18.16.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.1",
+    "@typescript-eslint/parser": "^5.59.1",
+    "@unocss/reset": "^0.51.8",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-solid": "^0.12.1",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4",
+    "unocss": "^0.51.8",
+    "vite": "^4.3.2",
+    "vite-plugin-solid": "^2.7.0"
+  },
+  "dependencies": {
+    "solid-js": "^1.7.3",
+    "solid-particles": "^2.9.3",
+    "tsparticles": "^2.9.3",
+    "tsparticles-engine": "^2.9.3"
+  }
+}
