@@ -18,7 +18,7 @@ const getList = async () => {
     location: row[3],
     source: row[4],
     persecutingTrans: row[5] === 'TRUE',
-    proof: row[6],
+    proof: row[6] === 'NONE' || row[6] === 'PENDING' ? null : row[6].split(' || '),
     factChecking: row[7] === 'TRUE',
   }));
   return data;

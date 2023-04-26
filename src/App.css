@@ -1,7 +1,6 @@
 :root {
   @apply font-sans;
-  color-scheme: light dark;
-  font-synthesis: none;
+  color-scheme: dark;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
