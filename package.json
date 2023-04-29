@@ -25,13 +25,13 @@
     "eslint-plugin-solid": "^0.12.1",
     "prettier": "^2.8.8",
     "typescript": "^5.0.4",
-    "unocss": "^0.51.8",
     "vite": "^4.3.2",
     "vite-plugin-solid": "^2.7.0"
   },
   "dependencies": {
     "solid-js": "^1.7.3",
     "solid-particles": "^2.9.3",
+    "style9": "^0.18.1",
     "tsparticles": "^2.9.3",
     "tsparticles-engine": "^2.9.3"
   }
