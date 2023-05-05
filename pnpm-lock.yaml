@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  solid-dialog:
+    specifier: ^0.3.0
+    version: 0.3.0
   solid-js:
     specifier: ^1.7.3
     version: 1.7.3
@@ -2980,6 +2983,10 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /solid-dialog@0.3.0:
+    resolution: {integrity: sha512-amUgF18ZT5v8xprWaPWUqqqdby1/ijyiFsXfXH7+W8YjA0al3668R5HPhjoZZ5bjk4kEMSa+jepnPScH0UK7eg==}
+    dev: false
 
   /solid-js@1.7.3:
     resolution: {integrity: sha512-4hwaF/zV/xbNeBBIYDyu3dcReOZBECbO//mrra6GqOrKy4Soyo+fnKjpZSa0nODm6j1aL0iQRh/7ofYowH+jzw==}

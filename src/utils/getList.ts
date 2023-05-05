@@ -1,4 +1,4 @@
-interface Content {
+export interface Content {
   names: string[];
   sites: string[];
   locations: string[];

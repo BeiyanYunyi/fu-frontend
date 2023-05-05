@@ -29,6 +29,7 @@
     "vite-plugin-solid": "^2.7.0"
   },
   "dependencies": {
+    "solid-dialog": "^0.3.0",
     "solid-js": "^1.7.3",
     "solid-particles": "^2.9.3",
     "style9": "^0.18.1",
