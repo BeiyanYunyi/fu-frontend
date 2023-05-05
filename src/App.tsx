@@ -20,15 +20,16 @@ const styles = style9.create({
     '@media (min-width: 768px)': {
       display: 'grid',
       gridAutoFlow: 'row dense',
-      gridTemplateColumns: '1fr 1fr',
+      gridTemplateColumns: 'repeat(2, 1fr)',
+      margin: '1rem',
     },
     '@media (min-width: 1280px)': {
-      gridTemplateColumns: '1fr 1fr 1fr',
+      gridTemplateColumns: 'repeat(3, 1fr)',
     },
     '@media (min-width: 1920px)': {
-      gridTemplateColumns: '1fr 1fr 1fr 1fr',
+      gridTemplateColumns: 'repeat(4, 1fr)',
     },
-    margin: '2rem',
+    margin: '1rem',
   },
   institutionListItem: {
     padding: '1rem',
