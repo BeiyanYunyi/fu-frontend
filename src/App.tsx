@@ -47,7 +47,7 @@ const styles = style9.create({
     marginBottom: '0.5rem',
     wordBreak: 'break-all',
     flexGrow: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
   },
   linkText: { color: 'rgb(96, 165, 250)', textDecorationLine: 'underline' },
   checking: { flexShrink: 0, marginTop: '0.4rem' },
