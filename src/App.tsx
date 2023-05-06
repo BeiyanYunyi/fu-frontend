@@ -1,11 +1,12 @@
-import { Component, For, Show, createResource } from 'solid-js';
+import { For, Show, createResource, type Component } from 'solid-js';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@unocss/reset/tailwind.css';
 import style9 from 'style9';
 import './App.css';
+import DetailList from './components/DetailList';
 import Landing from './components/Landing';
-import getList from './utils/getList';
 import Persecution from './components/Persecution';
+import getList from './utils/getList';
 
 const styles = style9.create({
   nmFlat: {
@@ -34,6 +35,8 @@ const styles = style9.create({
   institutionListItem: {
     padding: '1rem',
     borderRadius: '0.75rem',
+    display: 'flex',
+    flexDirection: 'column',
   },
   textXl: { fontSize: '1.25rem', lineHeight: '1.75rem' },
   institutionListItemContainer: {
@@ -43,6 +46,8 @@ const styles = style9.create({
     marginTop: '0.5rem',
     marginBottom: '0.5rem',
     wordBreak: 'break-all',
+    flexGrow: 1,
+    justifyContent: 'center',
   },
   linkText: { color: 'rgb(96, 165, 250)', textDecorationLine: 'underline' },
   checking: { flexShrink: 0, marginTop: '0.4rem' },
@@ -71,45 +76,44 @@ const App: Component = () => {
           {(item) => (
             <li class={styles('institutionListItem', 'nmFlat')}>
               <div class={styles('headerContainer')}>
-                <Show
-                  when={item.names.length > 1}
-                  fallback={<h2 class={styles('name', 'gray')}>{item.names[0]}</h2>}
+                <DetailList
+                  items={item.names}
+                  summaryClasses={styles('gray')}
+                  summaryContent="其它名称"
                 >
-                  <div>
-                    <h2 class={styles('name', 'gray')}>{item.names[0]}</h2>
-                    <details>
-                      <summary class={styles('gray')}>其它名称</summary>
-                      <For each={item.names.slice(1)}>
-                        {(name) => <h2 class={styles('name', 'gray')}>{name}</h2>}
-                      </For>
-                    </details>
-                  </div>
-                </Show>
+                  {(name) => <h2 class={styles('name', 'gray')}>{name}</h2>}
+                </DetailList>
                 <Show when={!item.checked}>
                   <p class={styles('checking')}>待审核</p>
                 </Show>
               </div>
               <div class={styles('institutionListItemContainer')}>
-                <div class={styles('siteList')}>
-                  <For each={item.sites}>
-                    {(site) => (
-                      <a
-                        class={styles('site', 'gray', 'textNormal')}
-                        rel="noreferrer noopener"
-                        target="_blank"
-                        href={site}
-                      >
-                        {site}
-                      </a>
-                    )}
-                  </For>
-                </div>
+                <DetailList
+                  items={item.sites}
+                  listClasses={styles('siteList')}
+                  detailsClasses={styles('siteList')}
+                  summaryClasses={styles('gray')}
+                  summaryContent="其它网址"
+                >
+                  {(site) => (
+                    <a
+                      class={styles('site', 'gray', 'textNormal')}
+                      rel="noreferrer noopener"
+                      target="_blank"
+                      href={site}
+                    >
+                      {site}
+                    </a>
+                  )}
+                </DetailList>
                 <Show when={item.locations[0] && item.locations[0] !== 'UNKNOWN'}>
-                  <div>
-                    <For each={item.locations}>
-                      {(location) => <p class={styles('gray', 'textNormal')}>{location}</p>}
-                    </For>
-                  </div>
+                  <DetailList
+                    items={item.locations}
+                    summaryContent="其它地址"
+                    summaryClasses={styles('gray')}
+                  >
+                    {(location) => <p class={styles('gray', 'textNormal')}>{location}</p>}
+                  </DetailList>
                 </Show>
                 <Show when={item.persecution.known}>
                   <Persecution detail={item.persecution} />
