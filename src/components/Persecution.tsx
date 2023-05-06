@@ -1,4 +1,5 @@
 import Modal from 'solid-dialog';
+import { IoWarning } from 'solid-icons/io';
 import type { Component } from 'solid-js';
 import { For, Match, Show, Switch, createSignal } from 'solid-js';
 import style9 from 'style9';
@@ -13,13 +14,18 @@ const styles = style9.create({
     lineHeight: '1.25rem',
     marginLeft: '0.25rem',
   },
-  underline: { textDecorationLine: 'underline' },
+  underline: {
+    textDecorationLine: 'underline',
+    textDecorationColor: '#FFA5A5',
+  },
   modalButton: { textAlign: 'start' },
 });
 
 const PersecutionInnerText: Component<{ underline?: boolean }> = (props) => (
   <>
-    <span class={styles('warningIcon')}>⚠</span>
+    <span class={styles('warningIcon')}>
+      <IoWarning />
+    </span>
     <p class={styles('persecution', props.underline && 'underline')}>
       可能存在对跨性别者的迫害<Show when={props.underline}> ↗</Show>
     </p>

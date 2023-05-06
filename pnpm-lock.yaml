@@ -4,6 +4,9 @@ dependencies:
   solid-dialog:
     specifier: ^0.3.0
     version: 0.3.0
+  solid-icons:
+    specifier: ^1.0.4
+    version: 1.0.4(solid-js@1.7.3)
   solid-js:
     specifier: ^1.7.3
     version: 1.7.3
@@ -2986,6 +2989,15 @@ packages:
 
   /solid-dialog@0.3.0:
     resolution: {integrity: sha512-amUgF18ZT5v8xprWaPWUqqqdby1/ijyiFsXfXH7+W8YjA0al3668R5HPhjoZZ5bjk4kEMSa+jepnPScH0UK7eg==}
+    dev: false
+
+  /solid-icons@1.0.4(solid-js@1.7.3):
+    resolution: {integrity: sha512-gJTp4in3+OYCs9WvDkSLt4Los2unR3Uoder8wjh15GsfP20xiNOLfPTJllXmn+fI8+k3x7bRYtLGIgWd9fUQug==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.7.3
     dev: false
 
   /solid-js@1.7.3:
